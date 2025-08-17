@@ -1,22 +1,51 @@
 # mini-flappy
 
-**mini-flappy** is a simplified *Flappy Bird*-style mini-game built entirely in a single HTML file (`index.html`).  
-The goal of this project is to create a quick prototype to practice game loop mechanics, physics (gravity & jump), obstacle spawning, and web deployment.
+## Description
+Flappy Box is a simplified mini-game inspired by *Flappy Bird*.  
+The player controls a yellow square that must jump through gaps between green pipe obstacles.  
+The game includes gravity, a scoring system, and increasing difficulty as the score rises.  
+It is lightweight and built entirely in a single HTML file.
 
----
+## Technologies Used
+- HTML5 for game structure and canvas rendering  
+- CSS3 for styling and layout  
+- JavaScript (Vanilla JS) for game logic, physics, obstacles, and scoring  
+- LocalStorage for saving high scores in the browser
 
 ## Features
-- Simple yellow square character.  
-- Green rectangle pipes as obstacles (top & bottom) with random gaps.  
-- Controls: click / tap / **Space** key to jump.  
-- Score +1 for every pipe passed; Highscore stored in `localStorage`.  
-- Increasing difficulty: pipe speed grows as the score increases.  
-- Adjustable balancing: minimum horizontal distance between pipes and adaptive vertical gap.  
-- Lightweight UI: scoreboard at top-left, **Start Game** & **Reset High** buttons.
+- Yellow square character controlled with mouse click, tap, or Space key  
+- Green pipe obstacles with adjustable minimum spacing and random gaps  
+- Score increases by +1 for each obstacle passed  
+- Highscore stored persistently using LocalStorage  
+- Game speed gradually increases with score  
+- Start screen and reset highscore functionality
 
----
+## Setup Instructions
+1. Clone or download the repository:  
+   git clone https://github.com/Facray05/mini-flappy.git
+2. Open the project folder.
+3. Launch the game by opening `index.html` directly in any modern browser (Chrome, Firefox, Edge).
+4. To deploy online:
 
-## How to Run (Locally)
-1. Download the `index.html` file.  
-2. Open it directly in a modern browser (Chrome, Firefox, Edge).  
-3. Click **Start Game**, then press **Space** / click / tap to jump.
+   * Option A (Quick): Drag & drop the folder into Netlify for instant hosting.
+   * Option B (Recommended): Import the GitHub repo into Netlify for automatic deployment on each commit.
+
+### Demo Links
+
+* GitHub Repository: https://github.com/Facray05/mini-flappy
+* Live Demo (Netlify): https://miniflappygame.netlify.app
+
+## AI Support Explanation
+
+During development, **AI Granite** was used to refine the pipe obstacle spawning system.
+AI suggested introducing a `minPipeDistance` variable to ensure pipes do not spawn too close together.
+This allows horizontal spacing to be adjustable, while vertical gaps remain adaptive with parameters such as `baseGap`, `gapReductionPerScore`, and `maxGapReduction`.
+
+Prompt used:
+
+remake the code so the pipe obstacles aren't too close too each other in the game i made below with a minimum distance that i can adjust (the horizontal and vertical pipe distances)
+
+All AI outputs were reviewed, tested, and manually adjusted by the developer.
+AI served only as a development helper, not as part of the runtime game.
+
+
